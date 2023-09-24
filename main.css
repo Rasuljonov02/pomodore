@@ -20,6 +20,53 @@ body {
 	border-radius: 10px;
 	place-items: center;
 }
+
+.contaner1 {
+	background-color: rgb(14, 117, 31);
+	color: wheat;
+	width: 70vh;
+	height: 60vh;
+	display: none;
+	border-radius: 10px;
+	place-items: center;
+}
+
+.contaner1 img {
+	width: 30vh;
+	animation-name: qongiroq;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+@keyframes qongiroq {
+	from {
+		transform: rotate(-20deg);
+	}
+	to {
+		transform: rotate(20deg);
+	}
+}
+.btn3 {
+	border-radius: 10px;
+	width: 30vh;
+	height: 40px;
+	border: 3px solid rgb(38, 187, 8);
+	background: none;
+	font-size: 20px;
+	color: white;
+	cursor: progress;
+	align-items: center;
+	justify-content: center;
+}
+.btn3:hover {
+	color: rgb(0, 0, 0);
+	transition: all 0.5s;
+	background-color: #05be27;
+	border: 3px solid rgb(157, 255, 0);
+}
+.btn3:active {
+	transform: scale(0.9);
+}
 .naw {
 	display: flex;
 	align-items: center;

@@ -1,8 +1,11 @@
 const taim = document.querySelector(".taim");
 const btn = document.querySelector(".btn");
 const btn1 = document.querySelector(".btn1");
+const btn3 = document.querySelector(".btn3");
 
+const qonfir = document.querySelector(".contaner1");
 const title = document.querySelector("title");
+const contaner = document.querySelector(".contaner");
 const pomodoro = document.getElementById("pomodoro");
 const shortBreak = document.getElementById("shortBreak");
 const longBreak = document.getElementById("longBreak");
@@ -24,6 +27,12 @@ btn1.addEventListener("click", () => {
 	btn.style.display = "flex";
 	btn1.style.display = "none";
 });
+btn3.addEventListener("click", () => {
+	location.reload();
+	contaner.style.display = "grid";
+
+	qonfir.style.display = "none";
+});
 
 pomodoro.addEventListener("click", () => {
 	longBreak.classList.remove("activ");
@@ -37,7 +46,7 @@ shortBreak.addEventListener("click", () => {
 	pomodoro.classList.remove("activ");
 	longBreak.classList.remove("activ");
 	shortBreak.classList.add("activ");
-	m = 5;
+	m = 1;
 	taim.innerText = "05:00";
 	resetTimer();
 });
@@ -64,6 +73,9 @@ const startCountdown = () => {
 
 				audio = new Audio("2.mp3");
 				audio.play();
+				contaner.style.display = "none";
+
+				qonfir.style.display = "grid";
 				return;
 			}
 
