@@ -26,7 +26,7 @@ shortBreak.addEventListener("click", () => {
 	pomodoro.classList.remove("activ");
 	longBreak.classList.remove("activ");
 	shortBreak.classList.add("activ");
-	m = 1;
+	m = 5;
 	taim.innerText = "05:00";
 	resetTimer();
 });
