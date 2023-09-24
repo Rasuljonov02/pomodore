@@ -85,7 +85,7 @@ const startCountdown = () => {
 			} else {
 				s--;
 			}
-		}, 10);
+		}, 1000);
 	}
 };
 // pauza qiladi
