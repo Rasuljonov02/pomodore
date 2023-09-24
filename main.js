@@ -1,5 +1,7 @@
 const taim = document.querySelector(".taim");
 const btn = document.querySelector(".btn");
+const btn1 = document.querySelector(".btn1");
+
 const title = document.querySelector("title");
 const pomodoro = document.getElementById("pomodoro");
 const shortBreak = document.getElementById("shortBreak");
@@ -12,6 +14,8 @@ let audio;
 
 btn.addEventListener("click", () => {
 	startCountdown();
+	btn1.style.display = "flex";
+	btn.style.display = "none";
 });
 
 pomodoro.addEventListener("click", () => {

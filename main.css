@@ -37,6 +37,8 @@ body {
 	font-size: 20px;
 	color: white;
 	cursor: progress;
+	align-items: center;
+	justify-content: center;
 }
 .btn:hover {
 	color: rgb(0, 0, 0);
