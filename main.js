@@ -18,6 +18,13 @@ btn.addEventListener("click", () => {
 	btn.style.display = "none";
 });
 
+btn1.addEventListener("click", () => {
+	startCountdown();
+	pauseCountdown();
+	btn.style.display = "flex";
+	btn1.style.display = "none";
+});
+
 pomodoro.addEventListener("click", () => {
 	longBreak.classList.remove("activ");
 	shortBreak.classList.remove("activ");
@@ -68,6 +75,11 @@ const startCountdown = () => {
 			}
 		}, 1000);
 	}
+};
+// pauza qiladi
+const pauseCountdown = () => {
+	clearInterval(countdownInterval);
+	countdownInterval = null;
 };
 
 const timetoString = (num) => (num < 10 ? "0" + num : num);
