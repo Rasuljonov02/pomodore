@@ -14,7 +14,7 @@ body {
 	background-color: rgb(14, 117, 31);
 	color: wheat;
 	width: 70vh;
-	height: 60vh;
+	height: 40vh;
 	display: grid;
 	border-radius: 10px;
 	place-items: center;

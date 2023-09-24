@@ -1,31 +1,33 @@
 const taim = document.querySelector(".taim");
-const btn = document.querySelector("button");
+const btn = document.querySelector(".btn");
 
 let m = 25;
+let s = 0;
+let countdownInterval;
 
-let S = 0;
-let n = 0;
-let Color;
-let Sec;
-btn.addEventListener("click", (e) => {
-	startCountdown(); // Start the countdown timer
-	console.log("5");
+btn.addEventListener("click", () => {
+  startCountdown();
 });
 
+const startCountdown = () => {
+  if (!countdownInterval) {
+    countdownInterval = setInterval(() => {
+      taim.innerText = `${timetoString(m)}:${timetoString(s)}`;
 
-const TimetoString = (num) => (num < 10 ? "0" + num : num); // bu faqat 0 qoshish uchun
+      if (m === 0 && s === 0) {
+        clearInterval(countdownInterval);
+        taim.innerText = "00:00";
+        return;
+      }
 
-const Timer = () => {
-	Sec = setInterval(() => {
-		taim.innertText = `${TimetoString(m)}:${TimetoString(S)}`;
-		if (m == 0 && S == 0) {
-			clearInterval(Sec);
-			m;
-		}
-		if (S == 0) {
-			S = 60;
-			m--;
-		}
-		S--;
-	}, 100);
+      if (s === 0) {
+        s = 59;
+        m--;
+      } else {
+        s--;
+      }
+    }, 1000);
+  }
 };
+
+const timetoString = (num) => (num < 10 ? "0" + num : num);
