@@ -51,7 +51,6 @@ const startCountdown = () => {
 				taim.innerText = "00:00";
 				title.innerText = "00:00";
 
-				// Ses çalma
 				audio = new Audio("2.mp3");
 				audio.play();
 				return;
