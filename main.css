@@ -122,3 +122,14 @@ body {
 .btn1 {
 	display: none;
 }
+@media (max-width: 700px) {
+	.contaner {
+		width: 90%;
+	}
+	.contaner1 {
+		width: 90%;
+	}
+	.contaner1 img {
+		width: 200px;
+	}
+}
